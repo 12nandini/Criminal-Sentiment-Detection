@@ -13,6 +13,7 @@ ALGORITHMS USED:
 5) Decision Tree
 
 RESULTS:
+
 ![image](https://user-images.githubusercontent.com/53509075/168728526-90987b70-9745-4d05-b79a-76370dce4f3f.png)
 
 It can be observed that the training performance of Naïve Bayes, Support vector machine, K-Nearest Neighbor, Random Forest were appreciable, but these models did not perform well for testing sets. It can be observed that Decision Tree produced better performances for training, validation, and testing sets.
