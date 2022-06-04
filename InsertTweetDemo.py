@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 
 import json
 import pandas as pd
@@ -75,11 +72,7 @@ def nbTrain():
     fpr, tpr, thresholds = metrics.roc_curve(actual, predictions, pos_label=1)
     nbscore = format(metrics.auc(fpr, tpr))
     nbscore = float(nbscore)*100
-    
-#    nb_matrix = confusion_matrix(actual, predictions)
-#    plt.figure()
-#    plot_confusion_matrix(nb_matrix, classes=[-1,0,1], title='Confusion matrix For NB classifier')
-    
+   
     print("\n")
 
     print("Naive Bayes  Accuracy : \n", nbscore,"%")
@@ -163,12 +156,7 @@ def RanFo():
 def runall():     
     retrieveTweet('data/tweetdata.txt')  
     retrieveProcessedData('processed_data/output.xlsx')
-#    nbTrain()
-#    datree()
-#    Tsvm()
-#    knN()
-#    RanFo()
-    
+
 def datreeINPUT(inputtweet):
     from sklearn import tree
     train_featurestree = vectorizer.fit_transform(x)
