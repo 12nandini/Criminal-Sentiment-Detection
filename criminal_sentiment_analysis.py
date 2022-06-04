@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Feb 18 19:02:34 2022
-
-@author: sande
-"""
-
 import json
 import pandas as pd
 import time
@@ -15,7 +7,6 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn import metrics
-#from sklearn.metrics import roc_auc_score
 
 tweets_data = []
 x = []
@@ -79,22 +70,9 @@ def nbTrain():
     fpr, tpr, thresholds = metrics.roc_curve(actual, predictions, pos_label=1)
     nbscore = format(metrics.auc(fpr, tpr))
     nbscore = float(nbscore)*100
-    
-    #nb_matrix = confusion_matrix(actual, predictions)
-    #plt.figure()
-    #plot_confusion_matrix(nb_matrix, classes=[-1,0,1], title='Confusion matrix For NB classifier')
-    
+  
     print("\n")
     
-#    test_try= vectorizer.transform(["Lets help those in need, fight anxiety and bring happiness"])
-#    test_try2= vectorizer.transform(["Dont look down at people with anxiety rather give love and respect to all. shout! Equality."])
-#    predictr = nb.predict(test_try)
-#    predictt = nb.predict(test_try2)
-    
-    
-#    print(predictr)
-#    print(predictt)
-
     print("Naive Bayes  Accuracy : \n", nbscore,"%")
     print(" Completion Speed", round((time.time() - start_timenb),5))
     print()
@@ -113,11 +91,7 @@ def datree():
     ddd, ttt, thresholds = metrics.roc_curve(actual1, prediction1, pos_label=1)
     dtreescore = format(metrics.auc(ddd, ttt))
     dtreescore = float(dtreescore)*100
-    
-    #datree_matrix = confusion_matrix(actual1, prediction1)
-    #plt.figure()
-    #plot_confusion_matrix(datree_matrix, classes=[-1,0,1], title='Confusion matrix For Decision Tree classifier')
-    
+ 
     print("Decision tree Accuracy : \n", dtreescore, "%")
     print(" Completion Speed", round((time.time() - start_timedt),5))
     print()
