@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Feb 18 19:02:34 2022
-
-@author: sande
-"""
 import json
 import csv
 from nltk.tokenize import word_tokenize
@@ -148,11 +141,6 @@ def addpolarity():
 def savetoxlsx():
     df = pd.DataFrame(some_milby)
     df.to_excel('processed_data/output.xlsx', header=("id","sentiment"), index=False)
-    
-    
-    #file = open("testfile_data.txt","w") 
-    #file.write(some_milby) 
-    #file.close() 
     
     print("===========================")
     print("Data Saved!")
