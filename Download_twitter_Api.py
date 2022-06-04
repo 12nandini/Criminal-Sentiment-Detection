@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Feb 18 19:02:34 2022
-
-@author: sande
-"""
 
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
